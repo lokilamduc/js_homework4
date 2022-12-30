@@ -102,6 +102,29 @@ document.getElementById("Vat").onclick = function () {
     hoten + " phải đóng tiền thuế thu nhập cá nhân " + tongthue + " VND";
 };
 //bài 4
+
+function myFunction() {
+  let x = document.getElementById("mySelect");
+  let output = document.getElementById("output");
+  x.addEventListener("change", function () {
+    if (x.value === "doanhnghiep") {
+      // chỗ này do anh xài class của bs nên anh phải thêm 1 bước remove cái class block nữa thì class none nó mới ăn đc
+      // này là cách 1: xài class bs phải có thêm bước remove do bị đè css
+      // output.classList.add("d-block");
+      // output.classList.remove("d-none");
+
+      // cách 2: sử dụng css inline, cách 2 phải xóa class d-none bên html, do code của bs xài important code mình ko đè đc mà anh phải css cho nó
+      output.style.display = "block";
+    } else if (x.value === "canhan") {
+      // document.getElementById("output").style.display = "none";
+      // output.classList.add("d-none");
+      // output.classList.remove("d-block");
+
+      output.style.display = "none";
+    }
+  });
+}
+myFunction();
 document.getElementById("bill2").onclick = function () {
   let mySelect = document.getElementById("mySelect").value;
   let sokenh = document.getElementById("sokenh").value;
