@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>homeworks4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="mx-auto text-center">bài 1: quản lý tuyển sinh</h1>
+    <div class="container mx-auto">
+      <div class="row">
+        <div class="form-group col-sm-4 mx-auto">
+          <input id="txtSubject1" type="text" placeholder="môn 1" />
+        </div>
+        <div class="form-group col-sm-4 mx-auto">
+          <input id="txtSubject2" type="text" placeholder="môn 2" />
+        </div>
+        <div class="form-group col-sm-4 mx-auto">
+          <input id="txtSubject3" type="text" placeholder="môn 3" />
+        </div>
+        <div class="col-sm-4 col-sm-4 mx-auto">
+          <select name="" id="txtStandardGrade">
+            <option value="25">nguyện vọng 1</option>
+            <option value="27">nguyện vọng 2</option>
+            <option value="29">nguyện vọng 3</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-4 mx-auto">
+          <select name="" id="area">
+            <option value="X">không</option>
+            <option value="A">khu vực A</option>
+            <option value="B">khu vực B</option>
+            <option value="C">khu vực C</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-4 mx-auto">
+          <select name="" id="type">
+            <option value="0">không</option>
+            <option value="1">loại 1</option>
+            <option value="2">loại 2</option>
+            <option value="3">loại 3</option>
+          </select>
+        </div>
+        <div class="text-center col-sm-12 mx-auto">
+          <button class="btn btn-primary" id="check" type="button">
+            kiểm tra
+          </button>
+        </div>
+        <div
+          style="display: none"
+          id="result1-wrapper"
+          class="text-center col-sm-4 mx-auto alert alert-success mt-3"
+        >
+          <p id="result1"></p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <h1 class="mx-auto text-center">bài 2: tính tiền điện</h1>
+    <div class="container mx-auto">
+      <div class="row">
+        <div class="form-group col-sm-12 mx-auto text-center">
+          <input
+            class="text-center"
+            id="name"
+            type="text"
+            placeholder="nhập họ tên"
+          />
+        </div>
+        <div class="form-group col-sm-4 mx-auto">
+          <input
+            class="form-control text-center"
+            type="number"
+            id="number"
+            placeholder="nhập số Kwh"
+          />
+        </div>
+        <div class="text-center col-sm-12 mx-auto">
+          <button class="btn btn-primary" id="bill" type="button">
+            tính tiền điện
+          </button>
+        </div>
+        <div
+          style="display: none"
+          id="result2-wrapper"
+          class="text-center col-sm-4 mx-auto alert alert-success mt-3"
+        >
+          <p id="result2"></p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <h1 class="mx-auto text-center">bài 3: Tính thuế thu nhập cá nhân</h1>
+    <div class="container mx-auto">
+      <div class="row">
+        <div class="form-group col-sm-12 mx-auto text-center">
+          <input
+            class="text-center"
+            id="hoten"
+            type="text"
+            placeholder="nhập họ và tên"
+          />
+        </div>
+        <div class="form-group col-sm-12 text-center">
+          <div class="form-group col-sm-4 mx-auto">
+            <input
+              class="form-control text-center"
+              type="number"
+              id="tongtien"
+              placeholder="tổng tiền thu nhập năm"
+            />
+          </div>
+          <div class="form-group col-sm-4 mx-auto">
+            <input
+              class="form-control text-center"
+              type="number"
+              id="nguoiphuthuoc"
+              placeholder="số người phụ thuộc"
+            />
+          </div>
+        </div>
+        <div class="text-center col-sm-12 mx-auto">
+          <button class="btn btn-primary" id="Vat" type="button">
+            tính tiền thuế
+          </button>
+        </div>
+        <div
+          style="display: none"
+          id="result3-wrapper"
+          class="text-center col-sm-4 mx-auto alert alert-success mt-3"
+        >
+          <p id="result3"></p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <h1 class="mx-auto text-center">bài 4: tính tiền cáp</h1>
+    <div class="container mx-auto">
+      <div class="form-group col-sm-12 mx-auto text-center">
+        <select id="mySelect">
+          <option value="loai">chọn loại khách hàng</option>
+          <option value="canhan">cá nhân</option>
+          <option id="company" value="doanhnghiep">doanh nghiệp</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-12 mx-auto text-center">
+          <input
+            class="text-center"
+            id="makh"
+            type="text"
+            placeholder="nhập mã khách hàng"
+          />
+        </div>
+        <div class="form-group col-sm-12 text-center">
+          <div class="form-group col-sm-4 mx-auto">
+            <input
+              class="form-control text-center"
+              type="number"
+              id="sokenh"
+              placeholder="số kênh cao cấp"
+            />
+          </div>
+          <div class="form-group col-sm-4 mx-auto">
+            <input
+              class="form-control text-center"
+              type="number"
+              id="soketnoi"
+              placeholder="số kết nối thêm dành cho doanh nghiệp"
+            />
+          </div>
+        </div>
+        <div class="text-center col-sm-12 mx-auto">
+          <button class="btn btn-primary" id="bill2" type="button">
+            tính tiền điện
+          </button>
+        </div>
+        <div
+          style="display: none"
+          id="result4-wrapper"
+          class="text-center col-sm-4 mx-auto alert alert-success mt-3"
+        >
+          <p id="result4"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
